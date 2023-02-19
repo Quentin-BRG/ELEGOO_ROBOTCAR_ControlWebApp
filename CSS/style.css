@@ -1,15 +1,13 @@
+
+
 :root {
-    top: 0;
-    left: 0;
     --maxScale: 6;
     font-family: Tahoma;
-
     background: rgb(0,13,36);
     background: linear-gradient(90deg, rgba(0,13,36,1) 0%, rgba(0,189,255,0.8631827731092436) 100%);
 }
 
 table {
-    position: absolute;
     border-collapse: separate;
     margin: 0 auto;
 }
@@ -24,13 +22,21 @@ td {
 
     td,
     img {
-        width: calc(100vw / var(--maxScale));
-        height: calc(100vw / var(--maxScale));
+        width: 80vw;
+        max-width: calc(100vw / var(--maxScale));
+        height: auto;
     }
 
     div.dashboard {
-        right: 50%;
-        top: 50%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(170, 170, 170, 0.9);
     }
 }
 
@@ -39,133 +45,97 @@ td {
 
     td,
     img {
-        width: calc(80vh / var(--maxScale));
-        height: calc(80vh / var(--maxScale));
+        height: 80vh;
+        max-height: calc(80vh / var(--maxScale));
+        width: auto;
     }
 
     div.dashboard {
+        position: absolute;
         right: 20px;
         top: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(170, 170, 170, 0.9);
     }
 }
 
 button {
     display: block;
     margin-bottom: 10px;
-    /* ajoute une marge en bas pour séparer chaque bouton */
     background-color: #008CBA;
-    /* couleur de fond */
     color: white;
-    /* couleur du texte */
     padding: 12px 24px;
-    /* taille du padding */
     border: solid 3px black;
-    /* pas de bordure */
     border-radius: 4px;
-    /* arrondi des coins */
     cursor: pointer;
-    /* curseur de la souris */
     font-size: 16px;
-    /* taille du texte */
     margin: 5px;
-    /* espacement entre les boutons */
-
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-    /* ajoute une marge en bas pour séparer chaque bouton */
     background-color: #008CBA;
-    /* couleur de fond */
     color: white;
-    /* couleur du texte */
     padding: 12px 24px;
-    /* taille du padding */
     border: none;
-    /* pas de bordure */
     border-radius: 4px;
-    /* arrondi des coins */
     cursor: pointer;
-    /* curseur de la souris */
     font-size: 16px;
-    /* taille du texte */
     margin: 5px;
-    /* espacement entre les boutons */
 }
 
 /* style pour le bouton modifier */
 #modify {
     background-color: #555555;
-    /* couleur de fond différente */
 }
 
 /* style pour le bouton aller */
 #go {
     background-color: #4CAF50;
-    /* couleur de fond différente */
 }
 
 /* style pour le bouton stop */
 #stop {
     background-color: #f44336;
-    /* couleur de fond différente */
 }
 
-div.dashboard,
 div.fieldCustom{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-
+    padding: 25px;
     border: solid 3px black;
     border-radius: 5px;
     background-color: rgba(170, 170, 170,0.9);
 }
 
-div.dashboard {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-
-}
-
-div.fieldCustom {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-}
-
 .fieldCustom {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .input-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .input-div label {
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .fieldCustom label {
     background-color: gray;
 }
 
-
 .button-div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.button-div button,
-.button-div input[type="text"] {
-    margin-bottom: 10px;
+    justify-content: center;
 }
