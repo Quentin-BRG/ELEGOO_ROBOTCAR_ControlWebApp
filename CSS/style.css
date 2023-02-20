@@ -114,7 +114,7 @@ label {
     background-color: #f44336;
     /* couleur de fond différente */
 }
-
+/*
 div.dashboard,
 div.fieldCustom{
     padding-top: 25px;
@@ -143,6 +143,69 @@ div.fieldCustom {
 .fieldCustom {
     display: flex;
     justify-content: center;
+}
+*/
+
+div.dashboard,
+div.fieldCustom{
+    padding: 25px 50px;
+    border: solid 3px black;
+    border-radius: 5px;
+    background-color: rgba(170, 170, 170,0.9);
+}
+
+div.dashboard {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+div.fieldCustom {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.fieldCustom {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1524px) {
+    div.dashboard,
+    div.fieldCustom {
+        position: relative;
+        padding: 15px;
+    }
+    
+    div.dashboard {
+        right: 10px;
+        top: 10px;
+    }
+    
+    div.fieldCustom {
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 1524px) {
+    div.dashboard,
+    div.fieldCustom {
+        padding: 10px;
+        position: relative;
+    }
+    
+    div.dashboard {
+        right: 5px;
+        top: 5px;
+    }
+    
+    div.fieldCustom {
+        left: 5px;
+        bottom: 5px;
+    }
 }
 
 .input-div {
