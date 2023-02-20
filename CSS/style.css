@@ -1,5 +1,3 @@
-
-
 :root {
     top: 0;
     left: 0;
@@ -21,137 +19,67 @@ td {
     background-color: white;
 }
 
-/* cas où la hauteur est plus grande que la largeur */
+/* mode portrait */
 @media (orientation: portrait) {
-
-    td,
-    img {
+    td, img {
         width: calc(100vw / var(--maxScale));
         height: calc(100vw / var(--maxScale));
     }
+    
+    .fieldCustom, .dashboard, .bluetooth-connection {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0 auto;
+    }
 
-    div.dashboard {
-        right: 50%;
-        top: 50%;
+    .dashboard div {
+        margin: 0 auto;
     }
 }
 
-/* cas où la largeur est plus grande que la hauteur */
+/* mode paysage */
 @media (orientation: landscape) {
-
-    td,
-    img {
+    td, img {
         width: calc(80vh / var(--maxScale));
         height: calc(80vh / var(--maxScale));
     }
-
-    div.dashboard {
-        right: 20px;
-        top: 20px;
-    }
 }
 
-button {
+button, label {
     display: block;
     margin-bottom: 10px;
-    /* ajoute une marge en bas pour séparer chaque bouton */
     background-color: #008CBA;
-    /* couleur de fond */
     color: white;
-    /* couleur du texte */
     padding: 12px 24px;
-    /* taille du padding */
     border: solid 3px black;
-    /* pas de bordure */
     border-radius: 4px;
-    /* arrondi des coins */
     cursor: pointer;
-    /* curseur de la souris */
-    font-size: 16px;
-    /* taille du texte */
+    font-size: 1em;
     margin: 5px;
-    /* espacement entre les boutons */
-
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    /* ajoute une marge en bas pour séparer chaque bouton */
-    background-color: #008CBA;
-    /* couleur de fond */
-    color: white;
-    /* couleur du texte */
-    padding: 12px 24px;
-    /* taille du padding */
-    border: none;
-    /* pas de bordure */
-    border-radius: 4px;
-    /* arrondi des coins */
-    cursor: pointer;
-    /* curseur de la souris */
-    font-size: 16px;
-    /* taille du texte */
-    margin: 5px;
-    /* espacement entre les boutons */
 }
 
 /* style pour le bouton modifier */
 #modify {
     background-color: #555555;
-    /* couleur de fond différente */
 }
 
 /* style pour le bouton aller */
 #go {
     background-color: #4CAF50;
-    /* couleur de fond différente */
 }
 
 /* style pour le bouton stop */
 #stop {
     background-color: #f44336;
-    /* couleur de fond différente */
-}
-/*
-div.dashboard,
-div.fieldCustom{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    border: solid 3px black;
-    border-radius: 5px;
-    background-color: rgba(170, 170, 170,0.9);
 }
 
-div.dashboard {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-
-}
-
-div.fieldCustom {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-}
-
-.fieldCustom {
-    display: flex;
-    justify-content: center;
-}
-*/
-
-div.dashboard,
-div.fieldCustom{
+div.dashboard, div.fieldCustom {
     padding: 25px 50px;
     border: solid 3px black;
     border-radius: 5px;
-    background-color: rgba(170, 170, 170,0.9);
+    background-color: rgba(170, 170, 170, 0.9);
 }
 
 div.dashboard {
@@ -173,65 +101,41 @@ div.fieldCustom {
 
 /* Media queries for responsiveness */
 @media (max-width: 1524px) {
-    div.dashboard,
-    div.fieldCustom {
+    /* div.dashboard, div.fieldCustom {
         position: relative;
         padding: 15px;
     }
-    
+
     div.dashboard {
         right: 15px;
         top: 10px;
     }
-    
+
     div.fieldCustom {
         left: 10px;
         bottom: 10px;
-    }
+    } */
 }
 
 @media (max-width: 1524px) {
-    div.dashboard,
-    div.fieldCustom {
+    /* div.dashboard, div.fieldCustom {
         padding: 15px;
         position: relative;
     }
-    
+
     div.dashboard {
         right: -5px;
         top: 5px;
     }
-    
+
     div.fieldCustom {
         left: 5px;
         bottom: 5px;
-    }
+    } */
 }
-
 
 .input-div {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.input-div label {
-    margin-right: 10px;
-}
-
-.fieldCustom label {
-    background-color: gray;
-}
-
-
-.button-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.button-div button,
-.button-div input[type="text"] {
-    margin-bottom: 10px;
 }
